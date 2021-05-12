@@ -1,8 +1,10 @@
-%Developed by: Shahrzad Tabatabaei, Concordia University, Mechanical, Industrial & Aerospace Engineering, Montreal, Canada
-%Last modified: May 12, 2021
 %This code solves for the static shape of a flexible cylinder in contact with axial flow
-%The cylinder may have a imperfect upstream support and initial inclination with respect to the oncoing flow
-%The solution is obtained via a central finite difference method
+%The cylinder may have an imperfect upstream support and initial inclination with respect to the oncoing flow
+%The solution is obtained via a central finite difference method (FDM)
+%Developed by: Shahrzad Tabatabaei 
+%Affiliation: Concordia University, Mechanical, Industrial & Aerospace Engineering, Montreal, Canada
+%Last modified: May 12, 2021
+%For inquiries, please contact us at [email]
 
 
 clc;
@@ -22,8 +24,8 @@ cn = 0.001; %normal frictional drag coefficient
 ct = 0.0125; %tangential frictional drag coefficient
 epsilon_cn = epsil * cn ; 
 epsilon_ct = epsil * ct ;
-xi = 1.22 ; %confinment factor 1
-h = 0.455 ; %confinment factor 2
+xi = 1.22 ; %confinment parameter 1
+h = 0.455 ; %confinment parameter 2
 theta0 = ( 5 * pi ) / 180 ; %initial inclination angle, rad
 k0 = 10 ^ 10 ; %dimensionless translational spring constant
 k0_star = 10 ^ 10 ; %dimensionless rotational spring constant
