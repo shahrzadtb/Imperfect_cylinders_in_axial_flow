@@ -3,6 +3,7 @@
 %This code solves the dynamic equation of the mentioned case, to obtain the
 %divergence speed
 %Developed by: Mojtaba Kheiri & later used and modified by Shahrzad Tabatabaei
+%Last Modified: May 12, 2021
 
 clc;
 clear;
