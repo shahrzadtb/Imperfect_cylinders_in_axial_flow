@@ -11,7 +11,7 @@ close all;
 
 
 %%%%%%%%%%%%%%%%%%%   System parameters   %%%%%%%%%%%%%%%%%%%
-L = 0.4 ;    %length of the beam
+L = 0.4 ;    %length of the cylinder, m
 gamma = 17.6 ; %dimensionless gravitational parameter
 f = 0.8 ; %end-piece shape factor 1
 cb = 0.1 ; %end-piece form drag coefficient
