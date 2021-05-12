@@ -1,5 +1,3 @@
-
-
 %This code solves the dynamic equation of the mentioned case, to obtain the
 %divergence speed
 %Developed by: Mojtaba Kheiri & later used and modified by Shahrzad Tabatabaei
