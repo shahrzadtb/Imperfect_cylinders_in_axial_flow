@@ -1,28 +1,36 @@
+%Developed by: Shahrzad Tabatabaei, Concordia University, Mechanical, Industrial & Aerospace Engineering, Montreal, Canada
+%Last modified: May 12, 2021
+%This code solves for the static shape of a flexible cylinder in contact with axial flow
+%The cylinder may have a imperfect upstream support and initial inclination with respect to the oncoing flow
+%The solution is obtained via a central finite difference method
 
-%Developed by: Shahrzad Tabatabaei
 
 clc;
 clear;
 close all;
 
-N = 35 ;     %number of beam elements
+
+%%%%%%%%%%%%%%%%%%%   System parameters   %%%%%%%%%%%%%%%%%%%
 L = 0.4 ;    %length of the beam
+gamma = 17.6 ; %dimensionless gravitational parameter
+f = 0.8 ; %end-piece shape factor 1
+cb = 0.1 ; %end-piece form drag coefficient
+khi_e = 0.00792 ; %end-piece shape factor 2
+khi_e_bar = 0.01056 ; %end-piece shape factor 3
+epsil = 25.3; %slenderness ratio
+cn = 0.001; %normal frictional drag coefficient
+ct = 0.0125; %tangential frictional drag coefficient
+epsilon_cn = epsil * cn ; 
+epsilon_ct = epsil * ct ;
+xi = 1.22 ; %confinment factor 1
+h = 0.455 ; %confinment factor 2
+theta0 = ( 5 * pi ) / 180 ; %initial inclination angle, rad
+k0 = 10 ^ 10 ; %dimensionless translational spring constant
+k0_star = 10 ^ 10 ; %dimensionless rotational spring constant
 
-
-%%%%%%%%%%%%%%%%%%%   System values   %%%%%%%%%%%%%%%%%%%
-
-gamma = 17.6 ;
-f = 0.8 ;
-cb = 0.1 ;
-khi_e = 0.00792 ;
-khi_e_bar = 0.01056 ;
-epsilon_cn = 25.3 * 0.0100 ;
-epsilon_ct = 25.3 * 0.0125 ;
-xi = 1.22 ;
-h = 0.455 ;
-theta0 = ( 5 * pi ) / 180 ;
-k0 = 10 ^ 10 ;
-k0_star = 10 ^ 10 ;
+%%%%%%%%%%%%%%%%%%%   Varying parameters   %%%%%%%%%%%%%%%%%%%
+N = 35 ;     %number of elements used in the FDM solution
+u = 0.001 : 0.01 : 2.97 ;    %nondimensional flow velocity
 
 %%%%%%%%%%%%%%%%%%%   Variables   %%%%%%%%%%%%%%%%%%%
 
@@ -45,10 +53,7 @@ end
  
 zeta = x / L ;
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-    
-u = 0.001 : 0.01 : 2.97 ;    %nondimensional flow velocity
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
 
 average_theta_s = zeros ( 1 , length ( u ) ) ;
 Slope_of_the_line = zeros ( 1 , length ( u ) ) ;
