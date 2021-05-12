@@ -1,7 +1,9 @@
-%This code solves the dynamic equation of the mentioned case, to obtain the
-%divergence speed
-%Developed by: Mojtaba Kheiri & later used and modified by Shahrzad Tabatabaei
+%This is the main file
+%This code uses an eigenvalue problem solver to find the critical flow velocity for the divergence of a flexible cylinder in contact with axial flow
+%Developed by: Mojtaba Kheiri and Shahrzad Tabatabaei
+%Affiliation: Concordia University, Mechanical, Industrial & Aerospace Engineering, Montreal, Canada
 %Last Modified: May 12, 2021
+%For inquires, please contact: [email]
 
 clc;
 clear;
@@ -10,13 +12,6 @@ hold on;
 
 global stvar
 
-
-u = 0.001 : 0.01 : 20.0; %flow velocity range
-stvar.N = 10; %number of eignmodes
-stvar.typ = 6 ; %type of the configuration
-
-stvar.fformat = 1; %txt file output in plotter
-stvar.m = 5; %number of modes considered in Tecplot output
 
 %systme parameters
 
@@ -36,6 +31,13 @@ stvar.cb = 0.1 ;
 stvar.k0_star = 10 ^ 10 ;
 stvar.k0 = 10 ^ 10 ;
 
+%Varying parameters
+u = 0.001 : 0.01 : 20.0; %flow velocity range
+stvar.N = 10; %number of eignmodes
+stvar.typ = 6 ; %type of the configuration
+
+stvar.fformat = 1; %txt file output in plotter
+stvar.m = 5; %number of modes considered in Tecplot output
 
 
 % Static equation values %
@@ -48,7 +50,7 @@ stvar.theta_knot = ( 5 * pi ) / 180 ;   % initial inclination angle
 figure ( 1 );
 omegamat = zeros ( 2 * stvar.N , length ( u ) );
 
-
+%calling LinCylinStaticFullEqu.m
 for i = 1 : length ( u )
     omega = LinCylinStaticFullEqu( stvar.typ , stvar.N , u ( i ) );
     omegamat ( : , i ) = omega;
