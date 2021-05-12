@@ -1,9 +1,11 @@
 %This is the main file
 %This code uses an eigenvalue problem solver to find the critical flow velocity for the divergence of a flexible cylinder in contact with axial flow
+%The cylinder may have an imperfect upstream support and initial inclination with respect to the oncoming flow
 %Developed by: Mojtaba Kheiri and Shahrzad Tabatabaei
 %Affiliation: Concordia University, Mechanical, Industrial & Aerospace Engineering, Montreal, Canada
 %Last Modified: May 12, 2021
-%For inquires, please contact: [email]
+%For inquiries, please contact us at [email]
+
 
 clc;
 clear;
@@ -12,8 +14,7 @@ hold on;
 
 global stvar
 
-
-%systme parameters
+%%%%%%%%%%%%%%%%%%%   System parameters   %%%%%%%%%%%%%%%%%%%
 
 stvar.betta = 0.5 ;   %mass ratio
 stvar.gamma = 17.6 ;     %gravity effect
