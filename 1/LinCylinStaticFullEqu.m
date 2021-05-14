@@ -1,5 +1,9 @@
+%This is the function file used in the main file named "CallLinCylFullEq.m".
+%Developed by: Mojtaba Kheiri and Shahrzad Tabatabaei
+%Affiliation: Concordia University, Mechanical, Industrial & Aerospace Engineering, Montreal, Canada
+%Last Modified: May 12, 2021
+%For inquiries, please contact us at [sheze.tb@gmail.com]
 
-%Developed by: Mojtaba Kheiri & modified by Shahrzad Tabatabaei
 
 
 function omega = LinCylinStaticFullEqu( typ , N , u )
@@ -24,7 +28,7 @@ theta_knot = stvar.theta_knot ;
 
 
 
-%pre-setting matrices and arrays
+%Pre-setting matrices and arrays
 Mmat=zeros(N);
 Cmat=zeros(N);
 Kmat=zeros(N);
