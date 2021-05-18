@@ -53,7 +53,7 @@ omegamat = zeros ( 2 * stvar.N , length ( u ) );
 
 %calling LinCylinStaticFullEqu.m
 for i = 1 : length ( u )
-    omega = LinCylinStaticFullEqu( stvar.typ , stvar.N , u ( i ) );
+    omega = static_stab ( stvar.typ , stvar.N , u ( i ) );
     omegamat ( : , i ) = omega;
     plot(real(omega(stvar.N/2:3*stvar.N/2+1,:)),imag(omega(stvar.N/2:3*stvar.N/2+1,:)), 'go');
     hold on;
