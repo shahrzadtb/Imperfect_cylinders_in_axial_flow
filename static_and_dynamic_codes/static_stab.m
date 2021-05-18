@@ -1,5 +1,5 @@
 
-%This is the function file used in the main file named "CallLinCylFullEq.m".
+%This is the function file used in the main file named "Call_static_stab.m".
 %Developed by: Mojtaba Kheiri and Shahrzad Tabatabaei
 %Affiliation: Concordia University, Mechanical, Industrial & Aerospace Engineering, Montreal, Canada
 %Last Modified: May 12, 2021
@@ -28,8 +28,9 @@ N = stvar.N ;
 theta_knot = stvar.theta_knot ;
 
 
+%%%%%%%%%%%%%%%%%%%   Pre-setting matrices and arrays   %%%%%%%%%%%%%%%%%%%
 
-%Pre-setting matrices and arrays
+
 Mmat=zeros(N);
 Cmat=zeros(N);
 Kmat=zeros(N);
@@ -69,7 +70,9 @@ kronecker_delta=eye(N);
         
     end
     
-    %calculation of B C D
+    
+%%%%%%%%%%%%%%%%%%%   calculation of B C D matrices   %%%%%%%%%%%%%%%%%%%
+    
     %B and C (for free-free) from the aforementioned dissertation
     B ( 1:2 , 1:2 )= [0 , 2*sqrt(3) ;0 , 0];
     C ( 1:2 , 1:2 )= [0 , 0 ;0 , 0];
