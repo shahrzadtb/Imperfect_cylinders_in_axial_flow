@@ -10,6 +10,8 @@
 function omega = static_stab ( typ , N , u )
 global stvar
 
+%%%%%%%%%%%%%%%%%%%   System parameters   %%%%%%%%%%%%%%%%%%%
+
 
 betta = stvar.betta ;
 gamma = stvar.gamma ;
