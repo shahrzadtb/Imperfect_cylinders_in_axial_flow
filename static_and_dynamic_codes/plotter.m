@@ -5,13 +5,6 @@
 %Last Modified: May 12, 2021
 %For inquires, please contact: [sheze.tb@gmail.com]
 
-
-
-clc;
-clear;
-close all;
-hold on;
-
 global stvar
 
 N = stvar.N;
