@@ -7,7 +7,7 @@
 
 
 
-function omega = LinCylinStaticFullEqu( typ , N , u )
+function omega = static_stab ( typ , N , u )
 global stvar
 
 
