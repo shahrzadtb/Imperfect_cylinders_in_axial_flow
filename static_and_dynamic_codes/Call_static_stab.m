@@ -20,6 +20,7 @@ stvar.betta = 0.5 ; %mass ratio
 stvar.gamma = 17.6 ; %dimensionless gravitational parameter
 stvar.khi_e = 0.00792 ;%end-piece shape factor 2
 stvar.khi_e_bar = 0.01056 ; %end-piece shape factor 3
+stvar.typ = 6 ; %type of the configuration, 6 indicates geometrically imperfect with imperfect support
 epsil = 25.3; %slenderness ratio
 cn = 0.001; %normal frictional drag coefficient
 ct = 0.0125; %tangential frictional drag coefficient
