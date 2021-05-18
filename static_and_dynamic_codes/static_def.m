@@ -4,7 +4,7 @@
 %Developed by: Shahrzad Tabatabaei 
 %Affiliation: Concordia University, Mechanical, Industrial & Aerospace Engineering, Montreal, Canada
 %Last modified: May 12, 2021
-%For inquiries, please contact us at [email]
+%For inquiries, please contact us at [sheze.tb@gmail.com]
 
 
 clc;
@@ -13,6 +13,7 @@ close all;
 
 
 %%%%%%%%%%%%%%%%%%%   System parameters   %%%%%%%%%%%%%%%%%%%
+
 L = 0.4 ;    %length of the cylinder, m
 gamma = 17.6 ; %dimensionless gravitational parameter
 f = 0.8 ; %end-piece shape factor 1
@@ -31,6 +32,7 @@ k0 = 10 ^ 10 ; %dimensionless translational spring constant
 k0_star = 10 ^ 10 ; %dimensionless rotational spring constant
 
 %%%%%%%%%%%%%%%%%%%   Varying parameters   %%%%%%%%%%%%%%%%%%%
+
 N = 35 ;     %number of elements used in the FDM solution
 u = 0.001 : 0.01 : 2.97 ;    %nondimensional flow velocity
 
@@ -155,6 +157,7 @@ for mn = 1 : length ( u )
     y = ( eta1 ) * L ;
     
     %%%%%%%%%%%%%%%%%%    Static shape before rotation    %%%%%%%%%%%%%%%%%%
+    
     figure(1)
     displacement(mn,1:N) = y ;
     plot ( displacement(mn,1:N) , x, 'color', [0 0 0])
@@ -164,6 +167,7 @@ for mn = 1 : length ( u )
     view([0 -90])
     
     hold on
+    
     %%%% Theta_s of tip is calculated using a straight line, curvefitted to
     %%%% the 1/3 of the end portion of the beam %%%%%%%
     
