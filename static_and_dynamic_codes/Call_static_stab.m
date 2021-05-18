@@ -4,7 +4,7 @@
 %Developed by: Mojtaba Kheiri and Shahrzad Tabatabaei
 %Affiliation: Concordia University, Mechanical, Industrial & Aerospace Engineering, Montreal, Canada
 %Last Modified: May 12, 2021
-%For inquiries, please contact us at [email]
+%For inquiries, please contact us at [sheze.tb@gmail.com]
 
 
 clc;
