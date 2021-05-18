@@ -27,7 +27,7 @@ h = stvar.h ;
 k0 = stvar.k0;
 k0_star = stvar.k0_star;
 N = stvar.N ;
-theta_knot = stvar.theta_knot ;
+theta0 = stvar.theta0 ;
 
 
 %%%%%%%%%%%%%%%%%%%   Pre-setting matrices and arrays   %%%%%%%%%%%%%%%%%%%
