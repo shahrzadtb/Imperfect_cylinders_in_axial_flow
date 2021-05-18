@@ -35,7 +35,7 @@ stvar.f = 0.8 ; %fairly streamlined
 stvar.cb = 0.1 ; %end-piece form drag coefficient
 stvar.k0_star = 10 ^ 10 ; %dimensionless rotational spring constant
 stvar.k0 = 10 ^ 10 ; %dimensionless translational spring constant
-stvar.theta_knot = ( 5 * pi ) / 180 ; %initial inclination angle
+stvar.theta0 = ( 5 * pi ) / 180 ; %initial inclination angle
 
 %%%%%%%%%%%%%%%%%%%   varying parameters   %%%%%%%%%%%%%%%%%%%
 
