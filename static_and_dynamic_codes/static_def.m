@@ -36,7 +36,7 @@ k0_star = 10 ^ 10 ; %dimensionless rotational spring constant
 N = 35 ;     %number of elements used in the FDM solution
 u = 0.001 : 0.01 : 2.97 ;    %nondimensional flow velocity
 
-%%%%%%%%%%%%%%%%%%%   Variables   %%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%   Matrices   %%%%%%%%%%%%%%%%%%%
 
 d = zeros ( N , 1 ) ;
 AAmatrix = zeros ( N+4, N+4 ) ;
