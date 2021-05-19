@@ -1,9 +1,12 @@
 
-%This is the function file used in the main file named "Call_static_stab.m".
+%This is the function file used in the main file named "Call_static_stab.m". This function calculates the eignvalues and eigenfrequencies of the fluid-structure system
 %Developed by: Mojtaba Kheiri and Shahrzad Tabatabaei
 %Affiliation: Concordia University, Mechanical, Industrial & Aerospace Engineering, Montreal, Canada
 %Last Modified: May 12, 2021
 %For inquiries, please contact us at [sheze.tb@gmail.com]
+%Copyright of Mojtaba Kheiri and Shahrzad Tabatabaei 2021
+%[1] Hodges, D. H., Pierce, A., 2011. INTRODUCTION TO STRUCTURAL DYNAMICS AND AEROELASTICITY, SECOND EDITION, Cambridge University Press.
+%[2] Kheiri, M., 2014. Dynamics of flexible slender structures in contact with axial flow and in presence of flexible end-restraints, PhD dissertation, McGill University, Montreal, Canada.
 
 
 
@@ -51,11 +54,11 @@ kronecker_delta=eye(N);
 
     % we use free-free eigenfunctions
     
-    lam = [0 0 4.73004 7.85320 10.9956 14.1372 17.2788]; % obtained from the book "INTRODUCTION TO STRUCTURAL DYNAMICS AND AEROELASTICITY, SECOND EDITION"  by Hodges', Table 3.2
+    lam = [0 0 4.73004 7.85320 10.9956 14.1372 17.2788]; % obtained from Ref. [1], Table 3.2
     for i = 8 : N
         lam ( i ) = ( 2 * i + 1 ) * pi / 2;
     end
-    % free-free euler-bernoulli beam eigenfunctions, obtained from PhD dissertation "Dynamics of flexible slender structures in contact with axial flow and in presence of flexible end-restraints" by Mojtaba Kheiri, eq. 4.32
+    % free-free Euler-Bernoulli beam eigenfunctions, obtained from Ref. [2], Eq. 4.32
     sigm(1:2) = 0;
     sigm(3:N) = ( cos ( lam(3:N) ) - cosh ( lam(3:N) ) ) ./ ( sin ( lam(3:N) ) -sinh ( lam(3:N) )  );  %Mojtaba's dissertation....
     phi_1(1,1:2)=[1 sqrt(3)];
