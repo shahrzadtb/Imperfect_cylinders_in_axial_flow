@@ -1,11 +1,11 @@
 %This code solves for the static shape of a flexible cylinder in contact with axial flow
-%The cylinder may have an imperfect upstream support and initial inclination with respect to the oncoing flow
+%The cylinder may have an imperfect upstream support and initial inclination with respect to the oncoming flow
 %The solution is obtained via a central finite difference method (FDM)
 %Developed by: Shahrzad Tabatabaei 
 %Affiliation: Concordia University, Mechanical, Industrial & Aerospace Engineering, Montreal, Canada
 %Last modified: May 12, 2021
 %For inquiries, please contact us at [sheze.tb@gmail.com]
-
+%Copyright of Shahrzad Tabatabaei 2021
 
 clc;
 clear;
