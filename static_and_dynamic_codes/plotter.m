@@ -4,6 +4,7 @@
 %Affiliation: Concordia University, Mechanical, Industrial & Aerospace Engineering, Montreal, Canada
 %Last Modified: May 12, 2021
 %For inquires, please contact: [sheze.tb@gmail.com]
+%Copyright of Mojtaba Kheiri and Shahrzad Tabatabaei 2021
 
 global stvar
 
