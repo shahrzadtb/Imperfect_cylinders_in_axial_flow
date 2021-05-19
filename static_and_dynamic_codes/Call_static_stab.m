@@ -5,6 +5,7 @@
 %Affiliation: Concordia University, Mechanical, Industrial & Aerospace Engineering, Montreal, Canada
 %Last Modified: May 12, 2021
 %For inquiries, please contact us at [sheze.tb@gmail.com]
+%Copyright of Mojtaba Kheiri and Shahrzad Tabatabaei 2021
 
 
 clc;
